@@ -11,7 +11,9 @@ async function main() {
   console.log("[db] Connected to PostgreSQL via Prisma.");
 
   server = app.listen(config.port, () => {
-    console.log(`[server] Courier & Logistics API listening on port ${config.port} (${config.env}).`);
+    console.log(
+      `ParceloHub, API listening on port ${config.port} (${config.env}).`,
+    );
   });
 }
 
