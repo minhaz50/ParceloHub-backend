@@ -8,7 +8,7 @@ let server: Server;
 async function main() {
   assertRequiredEnv();
   await prisma.$connect();
-  console.log("[db] Connected to PostgreSQL via Prisma.");
+  console.log("Database Connected to PostgreSQL via Prisma.");
 
   server = app.listen(config.port, () => {
     console.log(

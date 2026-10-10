@@ -7,7 +7,7 @@ const router = Router();
 
 router.get(
   "/dashboard",
-  auth(Role.ADMIN, Role.OPS_MANAGER, Role.SUPER_ADMIN),
+  auth(Role.ADMIN, Role.OPS_MANAGER, Role.SUPER_ADMIN, Role.HUB_MANAGER),
   AnalyticsController.getDashboardSummary,
 );
 router.get(
