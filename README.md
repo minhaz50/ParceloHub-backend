@@ -1,4 +1,4 @@
-# [ParceloHub] API
+# ParceloHub API
 
 A RESTful backend for managing courier and logistics, with role based access, payments and audit section.
 
@@ -56,3 +56,28 @@ This backend exposes 20+ versioned REST endpoints covering authentication, user 
 | Role  | Description            | Key Permission                                                            |
 | ----- | ---------------------- | ------------------------------------------------------------------------- |
 | ADMIN | Platform administrator | Manage users and roles, view stats, view audit logs, manage all resources |
+
+# API Overview
+
+### **Base URL**: /api/v1
+
+---
+
+### **Authentication**
+
+| Method | Endpoint            | Description               | Access        |
+| ------ | ------------------- | ------------------------- | ------------- |
+| Post   | /auth/register      | Register a new user       | Public        |
+| POST   | /auth/login         | Login with email/password | Public        |
+| POST   | /auth/refresh-token | Get a new access token    | Public        |
+| POST   | /auth/logout        | Invlidate refresh token   | Authenticated |
+| GET    | /auth/google        | Google OAuth login        | Public        |
+
+---
+
+## User / Profile
+
+| Method | Endpoint  | Description              | Access        |
+| ------ | --------- | ------------------------ | ------------- |
+| GET    | /users/me | Get current user profile | Authenticated |
+| PATCH  | /users/me | Update profile           | Authenticated |
